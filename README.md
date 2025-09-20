@@ -178,6 +178,84 @@ Tema ini tentang bagaimana memanajemen sebuah daftar game favorit, mulai dari cr
 
 > 1. Menutup program.
 
+=====================================================================================================
+
+### Struktur PCGame.java
+
+**1. Package**
+
+<img width="700" height="418" alt="image" src="https://github.com/user-attachments/assets/be3e112f-a5b5-4e77-b0d4-0bfc36df8541" />
+
+> 1. Menyatakan bahwa class PCGame berada di dalam package Model.
+
+> 2. Package digunakan untuk mengelompokkan class agar lebih rapi dan memudahkan pengelolaan (di sini khusus untuk class model/data).
+
+
+**2. Deklarasi Kelas**
+
+<img width="700" height="418" alt="{4310C27B-99B1-45B8-9223-F81868726776}" src="https://github.com/user-attachments/assets/5d07b0af-732d-4e5b-8289-3ecb08cc238d" />
+
+> 1. public class → Class dapat diakses dari mana saja.
+
+> 2. extends Game → PCGame adalah subclass dari Game (pewarisan/inheritance).
+
+
+**3. Constructor**
+
+<img width="700" height="444" alt="{53DEF2B0-08E5-48EB-A0F2-7D27EEC86409}" src="https://github.com/user-attachments/assets/8d7adfa8-8a20-46cc-bf52-69419ae982cb" />
+
+> 1. public → Dapat dipanggil dari luar class saat membuat objek.
+
+> 2. Parameter → Data awal (nama, genre, tahunRilis) untuk membuat objek game PC.
+
+> 3. super(...) → Memanggil constructor milik Game agar atribut dasar diinisialisasi.
+
+
+**4. Method Override**
+
+<img width="700" height="486" alt="{AC0C217C-5020-4F78-99B2-977593CBF95F}" src="https://github.com/user-attachments/assets/e15258d2-1fd3-4a00-babc-7398b65a98fa" />
+
+> 1. @Override → Menandakan method toString() menimpa (override) method bawaan Game.
+
+> 2. super.toString() → Memanggil output toString() dari Game, lalu menambahkan label “| (PC)”.
+
+==========================================================================
+
+### Struktur MobileGame.java
+
+**1. Package**
+
+<img width="700" height="418" alt="{034107DD-7E49-442D-B43E-88CFA35F2E00}" src="https://github.com/user-attachments/assets/b1428565-6e05-4db9-963d-3fc7d6eeb141" />
+
+> 1. Sama seperti PCGame, class ini juga berada di package Model.
+
+
+**2. Deklarasi Class**
+
+<img width="700" height="419" alt="{D1D52BD8-274A-4BCE-8428-D8533E4C2763}" src="https://github.com/user-attachments/assets/c987c5e8-6ee6-44e7-aa8d-d887bf0cbe78" />
+
+> 1. public → Class dapat diakses dari luar.
+
+> 2. extends Game → MobileGame juga merupakan subclass dari Game.
+
+
+**3. Constructor**
+
+<img width="700" height="442" alt="{694E6A5E-1DDA-49BF-B690-5EDCDC133006}" src="https://github.com/user-attachments/assets/f4889066-7aa4-4120-9790-c2b8d1a864f0" />
+
+> 1. Memiliki struktur dan tujuan yang sama seperti constructor PCGame.
+
+> 2. Memanggil constructor Game agar atribut dasar (nama, genre, tahunRilis) langsung diwarisi.
+
+
+**4. Method Override**
+
+<img width="700" height="469" alt="{522841D8-4546-41CC-9D2E-5AF7EC046B19}" src="https://github.com/user-attachments/assets/7883ed75-2042-4875-9d48-314b943303b1" />
+
+> 1. Meng-override toString() dari Game.
+
+> 2. Menambahkan label “| (Mobile)” pada output string agar platform game jelas.
+
 ===========================================================================
 
 ### Output
@@ -189,35 +267,42 @@ Tema ini tentang bagaimana memanajemen sebuah daftar game favorit, mulai dari cr
 Saat memulai program, user akan diminta 5 opsi yang ingin dilakukan yaitu Menambah game, Melihat daftar game, Mengubah atau memperbarui game di daftar game yang sudah ada sebelumnya, Menghapus game yang ada di daftar game, dan keluar.
 
 
-**2. Memilih opsi Tambah game**
+**2. Memilih opsi Jenis Game**
 
-<img width="700" height="453" alt="{8E5AA952-D0AD-41B2-B804-2DAB283E62DD}" src="https://github.com/user-attachments/assets/2b7f66ba-7f92-4ff8-bc86-d6de60c7e1fa" />
+<img width="700" height="456" alt="{B381D62E-ABFB-406E-83D5-F1F23D18D6D5}" src="https://github.com/user-attachments/assets/a533c7cb-a656-4d2e-af45-ce4a8cb5ef6a" />
 
-Jika user memilih nomor 1 yaitu tambah game, maka program akan meminta user untuk memasukkan nama game, genre game, dan tahun rilis game.
+Setelah memilih opsi tambah game, user harus memilih jenis game. jenis game ini digunakan untuk mengelompokkan game-game berdasarkan devicenya.
 
 
-**2. Memilih opsi Lihat Daftar Game**
+**3. Memilih opsi Tambah game**
 
-<img width="700" height="412" alt="{1C1DD984-72CF-47BD-A1D2-29275AEB67EC}" src="https://github.com/user-attachments/assets/f8444271-d82b-4225-a4a2-bf5ca8dd88e3" />
+<img width="7oo" height="450" alt="{9AD0B300-093A-4DBB-8C16-902A5AD589F9}" src="https://github.com/user-attachments/assets/78695850-2cc9-4c8f-b77f-3fe6404342cc" />
+
+Jika user memilih nomor 1 yaitu tambah game, maka program akan meminta user untuk memilih jenis game terlebih dahulu kemudian. memasukkan nama game, genre game, dan tahun rilis game.
+
+
+**4. Memilih opsi Lihat Daftar Game**
+
+<img width="700" height="487" alt="{21E90A0B-BAA0-48FD-A553-8B604CC00BA1}" src="https://github.com/user-attachments/assets/0feb3824-2aba-420c-8219-a99497e3e97f" />
 
 Jika user memilih nomor 2 yaitu melihat daftar game, maka program akan menampilkan daftar game yang telah dimasukkan sebelumnya.
 
 
-**3. Memilih opsi Ubah Game**
+**4. Memilih opsi Ubah Game**
 
-<img width="700" height="452" alt="{AD326ECB-D9B3-4FA3-BCEC-1A9BD53CECF8}" src="https://github.com/user-attachments/assets/7120c7db-db4a-4c9a-aec9-89efcc939bc4" />
+<img width="700" height="461" alt="{77FADBB8-35CB-4C68-B4C3-04170B676524}" src="https://github.com/user-attachments/assets/f1b2c1d4-9cb3-47fa-8b52-c38a847a0f6b" />
 
-Jika user memilih nomor 3 yaitu mengubah game di daftar game, maka program akan meminta user untuk memilih nomor urut dari game yang ingin diubah kemudian user diminta untuk memasukkan nama game, genre game, dan tahun rilis game.
+Jika user memilih nomor 3 yaitu mengubah game di daftar game, maka program akan meminta user untuk memilih nomor urut dari game yang ingin diubah kemudian user diminta untuk memilih jenis game terlebih dahulu, kemudian memasukkan nama game, genre game, dan tahun rilis game.
 
 
-**4. Memilih Hapus Game**
+**5. Memilih Hapus Game**
 
-<img width="700" height="443" alt="{80A42BD8-D9BD-4684-B84E-D0C9709D7CEA}" src="https://github.com/user-attachments/assets/28b6c3a8-9886-4c65-a460-215848fa8c8e" />
+<img width="700" height="462" alt="{73041A91-43AD-4097-B4F0-DD62E48BF8D8}" src="https://github.com/user-attachments/assets/4f2cc4da-a239-4050-8b6e-5a37f0ae392e" />
 
 Jika user memilih nomor 4 yaitu menghapus game, maka program akan meminta user untuk memilih nomor urut dari game yang ingin dihapus.
 
 
-**5. Memilih Keluar**
+**6. Memilih Keluar**
 
 <img width="700" height="412" alt="{4F096320-5951-40B9-B32E-F01BDB00951D}" src="https://github.com/user-attachments/assets/94fa4320-a311-49c2-bb88-35238960e677" />
 
