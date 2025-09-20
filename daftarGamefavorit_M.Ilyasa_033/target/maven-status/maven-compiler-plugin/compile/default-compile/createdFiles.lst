@@ -1,0 +1,5 @@
+Model\Game.class
+Model\PCGame.class
+Main\Main.class
+Model\MobileGame.class
+Service\GameService.class
